@@ -1,0 +1,38 @@
+<h2>Add Product</h2>
+
+<form method="POST">
+
+Product Name:
+<input name="name"><br><br>
+
+Quantity:
+<input name="qty"><br><br>
+
+Price:
+<input name="price"><br><br>
+
+<button type="submit">Add Product</button>
+
+</form>
+
+<h2>Inventory</h2>
+
+<table border="1">
+
+<tr>
+<th>Name</th>
+<th>Quantity</th>
+<th>Price</th>
+</tr>
+
+{% for p in products %}
+
+<tr>
+<td>{{p[0]}}</td>
+<td>{{p[1]}}</td>
+<td>{{p[2]}}</td>
+</tr>
+
+{% endfor %}
+
+</table>
